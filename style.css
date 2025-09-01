@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /*escala tipografica rem*/
+    --t1: clamp(2.9rem, 5vw, 3.5rem);
+    --t2: clamp(1.5rem, 4vw, 2.5rem);
+    --t3: clamp(1.2rem, 3vw, 1.8rem);
+    --tp: clamp(1rem, 2vw, 1.2rem);
+
+    --espacamento: 1.5rem;
+    --texto: #333;
+    --fundo: #fafafa;
+    --menu: #a3003f;
+    --texto-menu: #fff;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    position: sticky;
+    /*se torna fixo*/
+    top: 0;
+    background: var(--menu);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto-menu);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    margin: var(--espacamento) 0 1rem;
+}
+
+h1 {
+    font-size: var(--t1);
+}
+
+h2 {
+    font-size: var(--t2);
+}
+
+h3 {
+    font-size: var(--t3);
+}
+
+p,
+li {
+    font-size: var(--tp);
+    line-height: 1.6;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 1rem 2rem;
+    padding: 1rem;
+    border-left: 4px solid var(--menu);
+    background: #f0f0f5;
+}
+
+.conteudo {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.dicas {
+    margin-left: 2rem;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imagem {
+    width: 30%;
+    padding: 5px;
+    max-width: 600px;
+    aspect-ratio: 12/16;
+    /*tamanho da imagem*/
+    object-fit: cover;
+    /*ajustar sem distorcer*/
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: var(--menu);
+    color: var(--texto-menu);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
